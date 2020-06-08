@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+<changeSet author="Mike" id="1">
+        <createTable tableName="spaceship">
+            <column autoIncrement="true" name="id" type="INTEGER">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="spaceship_pkey"/>
+            </column>
+            <column name="model" type="VARCHAR(250)"/>
+            <column name="captain" type="VARCHAR(250)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="fuel" type="DECIMAL"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>

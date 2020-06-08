@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.1.xsd">
+<changeSet author="Mike" id="2">
+        <createTable tableName="fruit">
+            <column autoIncrement="true" name="id" type="INTEGER">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="fruit_pkey"/>
+            </column>
+            <column name="name" type="VARCHAR(250)"/>
+            <column name="taste_score" type="INT"/>
+        </createTable>
+    </changeSet>
+</databaseChangeLog>
