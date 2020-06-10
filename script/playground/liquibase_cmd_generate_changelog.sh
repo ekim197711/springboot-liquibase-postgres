@@ -4,5 +4,5 @@ docker run --rm \
 --network=mynetwork \
 liquibase/liquibase \
 --url="jdbc:postgresql://mypostgres:5432/mikesdb?currentSchema=public" \
---changeLogFile=/liquibase/changelog/log_dbchange1.xml \
+--changeLogFile=/liquibase/changelog/currentdb_extract.xml \
 --username=postgres --password=mike --logLevel=info generateChangeLog
