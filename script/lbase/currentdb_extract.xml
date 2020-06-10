@@ -1,0 +1,63 @@
+<?xml version="1.1" encoding="UTF-8" standalone="no"?>
+<databaseChangeLog xmlns="http://www.liquibase.org/xml/ns/dbchangelog" xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext" xmlns:pro="http://www.liquibase.org/xml/ns/pro" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd http://www.liquibase.org/xml/ns/pro http://www.liquibase.org/xml/ns/pro/liquibase-pro-3.9.xsd http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+    <changeSet author="liquibase (generated)" id="1591791316234-1">
+        <createTable tableName="space_cargo">
+            <column name="id" type="INTEGER">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="space_cargo_pkey"/>
+            </column>
+            <column name="cargo" type="VARCHAR(255)"/>
+            <column name="qty" type="INTEGER"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="liquibase (generated)" id="1591791316234-2">
+        <createTable tableName="spaceship">
+            <column autoIncrement="true" name="id" type="INTEGER">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="spaceship_pkey"/>
+            </column>
+            <column name="model" type="VARCHAR(250)"/>
+            <column name="captain" type="VARCHAR(250)">
+                <constraints nullable="false"/>
+            </column>
+            <column name="fuel" type="numeric"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="liquibase (generated)" id="1591791316234-3">
+        <createTable tableName="train">
+            <column name="id" type="INTEGER">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="train_pkey"/>
+            </column>
+            <column name="fuel" type="FLOAT8"/>
+            <column name="name" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="liquibase (generated)" id="1591791316234-4">
+        <createTable tableName="captain">
+            <column name="id" type="INTEGER">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="captain_pkey"/>
+            </column>
+            <column name="name" type="VARCHAR(255)"/>
+            <column name="skill" type="INTEGER"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="liquibase (generated)" id="1591791316234-5">
+        <createTable tableName="car">
+            <column name="id" type="INTEGER">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="car_pkey"/>
+            </column>
+            <column name="fuel" type="FLOAT8"/>
+            <column name="name" type="VARCHAR(255)"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="liquibase (generated)" id="1591791316234-6">
+        <createTable tableName="fruit">
+            <column autoIncrement="true" name="id" type="INTEGER">
+                <constraints nullable="false" primaryKey="true" primaryKeyName="fruit_pkey"/>
+            </column>
+            <column name="name" type="VARCHAR(250)"/>
+            <column name="taste_score" type="INTEGER"/>
+        </createTable>
+    </changeSet>
+    <changeSet author="liquibase (generated)" id="1591791316234-7">
+        <createSequence cacheSize="1" cycle="false" dataType="bigint" incrementBy="1" maxValue="9223372036854775807" minValue="1" sequenceName="hibernate_sequence" startValue="1"/>
+    </changeSet>
+</databaseChangeLog>
